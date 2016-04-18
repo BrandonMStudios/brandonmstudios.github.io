@@ -1,0 +1,16 @@
+Package: com.brandonmstudios.bleached
+Version: 0.0.1-1
+Architecture: iphoneos-arm
+Maintainer: Brandon Martin <brandonmstudios@gmail.com>
+Installed-Size: 120
+Depends: mobilesubstrate
+Filename: ./com.brandonmstudios.bleached_0.0.1-1_iphoneos-arm.deb
+Size: 3368
+MD5sum: dc9cb560be6775cea9fc14ed98c90a7f
+SHA1: 711aa4f89596d9d5eb5c3451e116986969494e66
+SHA256: 8ee45208451e4b46d5ee174ce2b87e055b2cc15aa1c545898078a47da34aa280
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: Brandon Martin
+Name: Bleached
+
