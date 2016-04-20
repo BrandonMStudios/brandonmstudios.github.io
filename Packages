@@ -1,16 +1,17 @@
 Package: com.brandonmstudios.bleached
-Version: 0.0.1-1
+Version: 0.9
 Architecture: iphoneos-arm
 Maintainer: Brandon Martin <brandonmstudios@gmail.com>
 Installed-Size: 120
 Depends: mobilesubstrate
-Filename: ./debs/com.brandonmstudios.bleached_0.0.1-1_iphoneos-arm.deb
-Size: 3368
-MD5sum: dc9cb560be6775cea9fc14ed98c90a7f
-SHA1: 711aa4f89596d9d5eb5c3451e116986969494e66
-SHA256: 8ee45208451e4b46d5ee174ce2b87e055b2cc15aa1c545898078a47da34aa280
+Filename: ./debs/com.brandonmstudios.bleached_0.9_iphoneos-arm.deb
+Size: 3418
+MD5sum: 8b9a67bd3eb79d7078a65078867c5900
+SHA1: a8d8a53779e5af69210b32efbc5a1915c5b3b377
+SHA256: acd0d5703b67e684597b42747fd7a2aa54c4bf3c63b427582052e55299872c16
 Section: Tweaks
-Description: An awesome MobileSubstrate tweak!
+Description: Set the Album/Artist to White on LS
 Author: Brandon Martin
+Depiction: http://brandonmstudios.github.io/depics/bleached.html
 Name: Bleached
 
