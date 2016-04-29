@@ -1,22 +1,103 @@
-<!DOCTYPE html>
-<h1>Days Since Jailbreak Release</h1>
-<p id="demo"></p>
-<script>
-var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+<!-- ayy lmao -->
 
-function countup(yr,m,d){
-var today=new Date()
-var todayy=today.getYear()
-if (todayy < 1000)
-todayy+=1900
-var todaym=today.getMonth()
-var todayd=today.getDate()
-var todaystring=montharray[todaym]+" "+todayd+", "+todayy
-var paststring=montharray[m-1]+" "+d+", "+yr
-var difference=(Math.round((Date.parse(todaystring)-Date.parse(paststring))/(24*60*60*1000))*1)
-difference+=" days"
-document.write("It\'s been "+difference+" since the release of the last jailbreak :(")
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Days without an SSL/TLS exploit.">
+<meta name="google-site-verification" content="TLLJPDP4pvbz-pt85bH9PiAyFDozMDpvimwFjdvp4xk" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<meta charset="utf-8">
+<title>Days without an SSL exploit</title>
+
+<style>
+html {
+  display: table;
+  min-width: 100%;
+  min-height: 100%;
 }
-//enter the count up date using the format year/month/day
-countup(2015,10,14)
+
+body {
+  font: 25px sans-serif;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+#days {
+  font-size: 120px;
+  margin: .5em 0 0 0;
+}
+small {
+  font-size: 15px;
+}
+</style>
+</head>
+<body>
+<p id="days">--</p>
+<div id="vulnlist"></div>
+<script type="text/javascript">
+
+Date.prototype.yyyymmdd = function() {
+
+        var yyyy = this.getFullYear().toString();
+        var mm = (this.getMonth()+1).toString();
+        var dd  = this.getDate().toString();
+
+        return yyyy + '-' + (mm[1]?mm:"0"+mm[0]) + '-' + (dd[1]?dd:"0"+dd[0]);
+   };
+
+var day = 24*60*60*1000;
+var today = new Date();
+var sslAPI = "api/catalog.json";
+$.getJSON(sslAPI)
+  .done(function( data ) {
+    var lastExploit = new Date(data.catalog[0].date);
+    console.log(lastExploit.getTime());
+
+    var diffDays = Math.round(Math.abs((today.getTime() - lastExploit.getTime())/(day)));
+    console.log(diffDays);
+    document.getElementById("days").innerHTML = diffDays;
+
+    for (var i = 0; i < 5; i++){
+      // Setup inital elements to add later.
+      var vulnText = document.createElement("h5");
+      var x = document.createElement("a");
+      var t = document.createTextNode(data.catalog[i].name);
+
+      // Setup URL contents
+      x.setAttribute("href", data.catalog[i].url);
+      x.appendChild(t);
+
+      // Setup current date and formatted string plus spaces and a hyphen.
+      var currentExploit = new Date(data.catalog[i].date);
+      var formattedText = document.createTextNode(currentExploit.yyyymmdd() + " ~ ");
+
+      // Append it all
+      vulnText.appendChild(formattedText);
+      vulnText.appendChild(x);
+      // Setup element for div and append full text, then add one to the count and do it all over again.
+      var element = document.getElementById("vulnlist");
+      element.appendChild(vulnText);
+    }
+});
+
+</script>
+<h5><a href="past.html">Past exploits...</a></h5>
+<p>Submissions <a href="submit.html">here</a>
+
+<p><small>Site developed by <a href="http://twitter.com/0x8badfl00d">@0x8badfl00d</a> and <a href="http://twitter.com/thekirbylover">@thekirbylover</a></small></p>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49901513-1', 'dayswithoutansslexploit.com');
+  ga('send', 'pageview');
+
 </script>
