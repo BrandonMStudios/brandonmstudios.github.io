@@ -9,8 +9,8 @@
     {
       "name": "PPJailbreak",
       "date": "01/18/2015",
-      "url": "http://pro.25pp.com/ppghost_mac",
-      "description": "Jailbreak for iOS 8.0 – 8.4"
+      "url": "http://bbs.25pp.com/thread-394142-1-1.html",
+      "description": "Jailbreak for iOS 8.0 - 8.4"
     },
     {
       "name": "TaiG",
@@ -23,6 +23,12 @@
       "date": "10/22/2014",
       "url": "http://en.8.pangu.io",
       "description": "Jailbreak for iOS 8.0 – 8.1"
+    },
+       {
+      "name": "Pangu",
+      "date": "06/23/2014",
+      "url": "http://en.7.pangu.io",
+      "description": "Jailbreak for iOS 7.1 – 7.1.2"
     },
     {
       "name": "p0sixspwn",
@@ -47,6 +53,18 @@
       "date": "05/30/2012",
       "url": "http://www.greenpois0n.us",
       "description": "Jailbreak for iOS 5.1 - 5.1.1"
+    },
+    {
+      "name": "Seas0nPass",
+      "date": "01/11/2011",
+      "url": "http://www.seas0npass.com/",
+      "description": "Jailbreak for Apple TV Firmware 4.0 - 6.2.1"
+    },
+    {
+      "name": "redsn0w",
+      "date": "07/07/2009",
+      "url": "http://blog.iphone-dev.org",
+      "description": "Jailbreak for iOS 2.0 – 6.1.6"
     }
   ]
 }
