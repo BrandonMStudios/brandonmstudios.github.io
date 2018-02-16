@@ -15,3 +15,36 @@ Author: Brandon Martin
 Depiction: http://brandonmstudios.github.io/depics/bleached.html
 Name: Bleached
 
+Package: com.brandonmstudios.secondstonone
+Version: 0.0.1
+Architecture: iphoneos-arm
+Maintainer: Brandon Martin <brandonmstudios@gmail.com>
+Installed-Size: 120
+Depends: mobilesubstrate
+Filename: ./debs/com.brandonmstudios.secondstonone_0.0.1_iphoneos-arm.deb
+Size: 3910
+MD5sum: 8a5686946ceebde98dfaedc243b057c0
+SHA1: fd58571143b1ef874af41c72137c618f04f0f963
+SHA256: bfb353128febc13fe73f566866d5088467e2ecf864b2fff5cb753108ebc14529
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: Brandon Martin <brandonmstudios@gmail.com>
+Name: secondstonone
+
+Package: com.reddestdream.minimalhostsblocker
+Version: 7.3
+Architecture: iphoneos-arm
+Maintainer: ReddestDream <reddestdream@gmail.com>
+Pre-Depends: dpkg (>= 1.13.25-5)
+Conflicts: com.thireus.untrustedhostsblockerexperimental, com.thireus.untrustedhostsblockerlight, com.thireus.untrustedhostsblocker, com.myrepospace.reddestdream.minimal, com.myrepospace.basic.basic
+Filename: ./debs/com.reddestdream.minimalhostsblocker_7.3_iphoneos-arm.deb
+Size: 5574
+MD5sum: 7ee7a78652a95b95508af5908f4780b0
+SHA1: 6c90780f465591af056b0d4724bfabca7ef9af3a
+SHA256: 2c69116ddbcc913947bcc7e7fd7a0840ef3f03a09c88877a8273446cc3e81ea4
+Section: Tweaks
+Description: A Minimal Ad Blocker! ^_^
+Author: ReddestDream <reddestdream@gmail.com>
+Depiction: https://reddestdream.github.io/depictions/MinimalHostsBlocker/index.html
+Name: Minimal Hosts Blocker
+
